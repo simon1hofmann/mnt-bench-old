@@ -151,13 +151,13 @@ aside {
 
 header {
     position: relative;
-    width: 100%;
+    width: 50%;
     min-height: auto;
     @include background-cover;
     background-position: center;
     background-image: url('../img/mnt_dark.svg');
     text-align: center;
-    color: white;
+    color: black;
     .header-content {
         position: relative;
         text-align: center;
