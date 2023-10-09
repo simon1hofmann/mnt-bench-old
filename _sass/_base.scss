@@ -156,6 +156,7 @@ header {
     @include background-cover;
     background-position: center;
     background-image: url('../img/mnt_dark.svg');
+    opacity: 0.5;
     text-align: center;
     color: black;
     .header-content {
