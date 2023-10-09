@@ -48,7 +48,7 @@ p {
 
 .bg-dark {
     background-color: $theme-dark;
-    color: white;
+    color: black;
 }
 
 .text-faded {
@@ -156,9 +156,8 @@ header {
     @include background-cover;
     background-position: center;
     background-image: url('../img/mnt_dark.svg');
-    opacity: 0.5;
     text-align: center;
-    color: black;
+    color: white;
     .header-content {
         position: relative;
         text-align: center;
