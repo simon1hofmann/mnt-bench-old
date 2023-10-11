@@ -25,8 +25,8 @@ $(document).on("change", ".mod-link", function() {
   $(".mod-link:checked").each(function() {
     arr.push($(this).val());
   })
-  var vals = arr.join(",")
-  var str = "http://example.com/?subject=Products&checked=" + vals;
+  var vals = 'checked[]=' + arr.join("&checked[]=")
+  var str = "http://example.com/?subject=Products&" + vals;
   var link = arr.length > 0 ? '<a href="'+str+'">Click me</a>': '' ;
   
   $('.link-container').html(link);
