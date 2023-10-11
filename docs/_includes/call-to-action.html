@@ -29,9 +29,9 @@
                 <div>
                   <h3>Choose Function</h3>
                   <span>
-                    <input type="checkbox" class="radio" value="mux" name="Function" /> MUX
-                    <input type="checkbox" class="radio" value="xor" name="Function" /> XOR
-                    <input type="checkbox" class="radio" value="xnor" name="Function" /> XNOR
+                    <input type="checkbox" class="radio" value="mux.fgl" name="Function" /> MUX
+                    <input type="checkbox" class="radio" value="xor.fgl" name="Function" /> XOR
+                    <input type="checkbox" class="radio" value="xnor.fgl" name="Function" /> XNOR
                   </span>
                 </div>
                 <div class="link-container"></div>
@@ -46,7 +46,7 @@ $(document).on("change", ".radio", function() {
     arr.push($(this).val());
   })
   var vals = arr.join("/")
-  var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals + ".fgl";
+  var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals;
   var link = arr.length > 0 ? '<a href="'+str+'" class="btn btn-default btn-xl" download>Download File</a>': '' ;
   
   $('.link-container').html(link);
