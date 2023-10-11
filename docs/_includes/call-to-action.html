@@ -7,44 +7,59 @@
                 <p class="text-faded">MNT-Bench has everything you need. No strings attached!</p>
                 <a href="https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/trindade16/mux21.fgl" class="btn btn-default btn-xl" download>Download MUX21</a>
                 <a href="https://github.com/cda-tum/mnt-sidb-bench" class="btn btn-default btn-xl" download>SiDB Bench</a>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                <br>
-                <p>Select Gateset</p>
-                <input type="checkbox" class="mod-link" name="selected" value="MIG" class="products" onclick="onlyOne(this)"> MIG
-                <input type="checkbox" class="mod-link" name="selected" value="AIG" class="products" onclick="onlyOne(this)"> AIG
-                <br>
-                <p>Select Function</p>
-                <input type="checkbox" class="mod-link" name="selected" value="MUX" class="products" onclick="onlyOne(this)"> MUX
-                <input type="checkbox" class="mod-link" name="selected" value="XOR" class="products" onclick="onlyOne(this)"> XOR
-                <br>
-                <p>Select Clocking Scheme</p>
-                <input type="checkbox" class="mod-link" name="selected" value="2DDWave" class="products" onclick="onlyOne(this)"> 2DDWave
-                <input type="checkbox" class="mod-link" name="selected" value="USE" class="products" onclick="onlyOne(this)"> USE
-                <input type="checkbox" class="mod-link" name="selected" value="RES" class="products" onclick="onlyOne(this)"> RES
-                <br>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                <div>
+                  <h3>Choose Network</h3>
+                  <label>
+                    <input type="checkbox" class="radio" value="MIG" name="Network" />MIG</label>
+                  <label>
+                    <input type="checkbox" class="radio" value="AIG" name="Network" />AIG</label>
+                  <label>
+                    <input type="checkbox" class="radio" value="XAG" name="Network" />XAG</label>
+                </div>
+                <div>
+                  <h3>Choose Clocking Scheme</h3>
+                  <label>
+                    <input type="checkbox" class="radio" value="2DDWave" name="Clocking" />2DDWave</label>
+                  <label>
+                    <input type="checkbox" class="radio" value="USE" name="Clocking" />USE</label>
+                  <label>
+                    <input type="checkbox" class="radio" value="RES" name="Clocking" />RES</label>
+                </div>
                 <div class="link-container"></div>
             </div>
         </div>
     </div>
 </section>
 <script>
-$(document).on("change", ".mod-link", function() {
+$(document).on("change", ".radio", function() {
   var arr = []
-  $(".mod-link:checked").each(function() {
+  $(".radio:checked").each(function() {
     arr.push($(this).val());
   })
-  var vals = 'checked[]=' + arr.join("&checked[]=")
-  var str = "http://example.com/?subject=Products&" + vals;
+  var vals = arr.join("/")
+  var str = "http://example.com/" + vals;
   var link = arr.length > 0 ? '<a href="'+str+'">Click me</a>': '' ;
   
   $('.link-container').html(link);
 });
 </script>
 <script>
-    function onlyOne(checkbox) {
-    var checkboxes = document.getElementsByName('selected')
-    checkboxes.forEach((item) => {
-        if (item !== checkbox) item.checked = false
-    })
-}
+    // the selector will match all input controls of type :checkbox
+    // and attach a click event handler 
+    $("input:checkbox").on('click', function() {
+      // in the handler, 'this' refers to the box clicked on
+      var $box = $(this);
+      if ($box.is(":checked")) {
+        // the name of the box is retrieved using the .attr() method
+        // as it is assumed and expected to be immutable
+        var group = "input:checkbox[name='" + $box.attr("name") + "']";
+        // the checked state of the group/box on the other hand will change
+        // and the current value is retrieved using .prop() method
+        $(group).prop("checked", false);
+        $box.prop("checked", true);
+      } else {
+        $box.prop("checked", false);
+      }
+    });
 </script>
