@@ -7,23 +7,28 @@
                 <p class="text-faded">MNT-Bench has everything you need. No strings attached!</p>
                 <a href="https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/trindade16/mux21.fgl" class="btn btn-default btn-xl" download>Download MUX21</a>
                 <a href="https://github.com/cda-tum/mnt-sidb-bench" class="btn btn-default btn-xl" download>SiDB Bench</a>
-                <input id="box1" type="checkbox" class="checkbox" value="bx1=1"> <label for="box1"> Box1 </label>
-                <input id="box2" type="checkbox" class="checkbox" value="bx2=1"> <label for="box2"> Box2 </label>
-                <a class="link" href="http://www.example.com/test.html">Open here</a>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <input type="checkbox" class="mod-link" name="selected" value="Blue" class="products">Blue
+                <br>
+                <input type="checkbox" class="mod-link" name="selected" value="Green" class="products">Green
+                <br>
+                <input type="checkbox" class="mod-link" name="selected" value="Purple" class="products">Purple
+                <br>
+                <div class="link-container"></div>
             </div>
         </div>
     </div>
 </section>
 <script>
-    $(".checkbox").on("change", function() {console.log('fzef');
-        var values = [];
-        $('.checkbox:checked').each(function() {
-            var result = $(this).val();
-            values.push(result);
-        });
-        $(".link").attr('href', 'http://www.example.com/tes.html?' + values.join("&"));
-    });
-
-    // Init link on page load
-    $(".checkbox").trigger("change");
+$(document).on("change", ".mod-link", function() {
+  var arr = []
+  $(".mod-link:checked").each(function() {
+    arr.push($(this).val());
+  })
+  var vals = arr.join(",")
+  var str = "http://example.com/?subject=Products&checked=" + vals;
+  var link = arr.length > 0 ? '<a href="'+str+'">Click me</a>': '' ;
+  
+  $('.link-container').html(link);
+});
 </script>
