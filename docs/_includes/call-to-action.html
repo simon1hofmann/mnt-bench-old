@@ -10,21 +10,20 @@
                 <input id="box1" type="checkbox" class="checkbox" value="bx1=1"> <label for="box1"> Box1 </label>
                 <input id="box2" type="checkbox" class="checkbox" value="bx2=1"> <label for="box2"> Box2 </label>
                 <a class="link" href="http://www.example.com/test.html">Open here</a>
-
-                <script>
-                    $(".checkbox").on("change", function() {console.log('fzef');
-                        var values = [];
-                        $('.checkbox:checked').each(function() {
-                            var result = $(this).val();
-                            values.push(result);
-                        });
-                        $(".link").attr('href', 'http://www.example.com/test.html?' + values.join("&"));
-                    });
-                
-                    // Init link on page load
-                    $(".checkbox").trigger("change");
-                </script>
             </div>
         </div>
     </div>
 </section>
+<script>
+    $(".checkbox").on("change", function() {console.log('fzef');
+        var values = [];
+        $('.checkbox:checked').each(function() {
+            var result = $(this).val();
+            values.push(result);
+        });
+        $(".link").attr('href', 'http://www.example.com/tes.html?' + values.join("&"));
+    });
+
+    // Init link on page load
+    $(".checkbox").trigger("change");
+</script>
