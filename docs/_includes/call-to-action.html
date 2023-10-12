@@ -49,11 +49,12 @@ $(document).on("change", ".select", function() {
   var func = $("input[name=Function]:checked").val();
   var library = $("input[name=Library]:checked").val();
   var clocking = $("input[name=Clocking]:checked").val();
-  var vals = library + "/" + clocking + "/" + func;
-  var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals;
-  var link = arr.length > 0 ? '<a href="'+str+'" class="btn btn-default btn-xl" download>Download File</a>': '' ;
-  
-  $('.link-container').html(link);
+  if(func && library && clocking){
+      var vals = library + "/" + clocking + "/" + func;
+      var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals;
+      var link = arr.length > 0 ? '<a href="'+str+'" class="btn btn-default btn-xl" download>Download File</a>': '' ;
+      $('.link-container').html(link);
+  }
 });
 </script>
 
