@@ -46,12 +46,10 @@
 </section>
 <script>
 $(document).on("change", ".select", function() {
-  var arr = []
-  $(".select:checked").each(function() {
-    arr.push($(this).val());
-  })
-  arr.reverse();
-  var vals = arr.join("/");
+  var func = document.querySelector('input[name=Function]:checked').value;
+  var library = document.querySelector('input[name=library]:checked').value;
+  var clocking = document.querySelector('input[name=Clocking]:checked').value;
+  var vals = library + "/" + clocking + "/" + func;
   var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals;
   var link = arr.length > 0 ? '<a href="'+str+'" class="btn btn-default btn-xl" download>Download File</a>': '' ;
   
