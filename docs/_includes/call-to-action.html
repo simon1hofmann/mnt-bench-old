@@ -7,15 +7,24 @@
                 <p class="text-faded">MNT-Bench has everything you need. No strings attached!</p>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
                 <div>
-                  <h3>Choose Network</h3>
+                  <h3>Choose Function</h3>
                     <label>
-                    <input type="radio" class="select" value="MIG" name="Network" /> MIG 
+                    <input type="radio" class="select" value="mux.fgl" name="Function" /> MUX 
                     </label>
                     <label>
-                    <input type="radio" class="select" value="AIG" name="Network" /> AIG 
+                    <input type="radio" class="select" value="xor.fgl" name="Function" /> XOR 
                     </label>
                     <label>
-                    <input type="radio" class="select" value="XAG" name="Network" /> XAG 
+                    <input type="radio" class="select" value="xnor.fgl" name="Function" /> XNOR 
+                    </label>
+                </div>
+                <div>
+                  <h3>Choose Gate Library</h3>
+                    <label>
+                    <input type="radio" class="select" value="QCAOne" name="Library" /> QCAOne 
+                    </label>
+                    <label>
+                    <input type="radio" class="select" value="Bestagon" name="Library" /> Bestagon 
                     </label>
                 </div>
                 <div>
@@ -30,18 +39,6 @@
                     <input type="radio" class="select" value="RES" name="Clocking" /> RES
                     </label>
                 </div>
-                <div>
-                  <h3>Choose Function</h3>
-                    <label>
-                    <input type="radio" class="select" value="mux.fgl" name="Function" /> MUX 
-                    </label>
-                    <label>
-                    <input type="radio" class="select" value="xor.fgl" name="Function" /> XOR 
-                    </label>
-                    <label>
-                    <input type="radio" class="select" value="xnor.fgl" name="Function" /> XNOR 
-                    </label>
-                </div>
                 <div class="link-container"></div>
             </div>
         </div>
@@ -53,7 +50,7 @@ $(document).on("change", ".select", function() {
   $(".select:checked").each(function() {
     arr.push($(this).val());
   })
-  var vals = arr.join("/")
+  var vals = arr.join("/").reverse();
   var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals;
   var link = arr.length > 0 ? '<a href="'+str+'" class="btn btn-default btn-xl" download>Download File</a>': '' ;
   
