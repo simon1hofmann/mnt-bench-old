@@ -9,37 +9,37 @@
                 <div>
                   <h3>Choose Network</h3>
                     <label>
-                    <input type="checkbox" class="radio" value="MIG" name="Network" /> MIG 
+                    <input type="radio" class="radio" value="MIG" name="Network" /> MIG 
                     </label>
                     <label>
-                    <input type="checkbox" class="radio" value="AIG" name="Network" /> AIG 
+                    <input type="radio" class="radio" value="AIG" name="Network" /> AIG 
                     </label>
                     <label>
-                    <input type="checkbox" class="radio" value="XAG" name="Network" /> XAG 
+                    <input type="radio" class="radio" value="XAG" name="Network" /> XAG 
                     </label>
                 </div>
                 <div>
                   <h3>Choose Clocking Scheme</h3>
                     <label>
-                    <input type="checkbox" class="radio" value="2DDWave" name="Clocking" /> 2DDWave
+                    <input type="radio" class="radio" value="2DDWave" name="Clocking" /> 2DDWave
                     </label>
                     <label>
-                    <input type="checkbox" class="radio" value="USE" name="Clocking" /> USE
+                    <input type="radio" class="radio" value="USE" name="Clocking" /> USE
                     </label>
                     <label>
-                    <input type="checkbox" class="radio" value="RES" name="Clocking" /> RES
+                    <input type="radio" class="radio" value="RES" name="Clocking" /> RES
                     </label>
                 </div>
                 <div>
                   <h3>Choose Function</h3>
                     <label>
-                    <input type="checkbox" class="radio" value="mux.fgl" name="Function" /> MUX 
+                    <input type="radio" class="radio" value="mux.fgl" name="Function" /> MUX 
                     </label>
                     <label>
-                    <input type="checkbox" class="radio" value="xor.fgl" name="Function" /> XOR 
+                    <input type="radio" class="radio" value="xor.fgl" name="Function" /> XOR 
                     </label>
                     <label>
-                    <input type="checkbox" class="radio" value="xnor.fgl" name="Function" /> XNOR 
+                    <input type="radio" class="radio" value="xnor.fgl" name="Function" /> XNOR 
                     </label>
                 </div>
                 <div class="link-container"></div>
@@ -50,7 +50,7 @@
 <script>
 $(document).on("change", ".radio", function() {
   var arr = []
-  $(".radio:checked").each(function() {
+  $(".radio:radio").each(function() {
     arr.push($(this).val());
   })
   var vals = arr.join("/")
@@ -60,22 +60,4 @@ $(document).on("change", ".radio", function() {
   $('.link-container').html(link);
 });
 </script>
-<script>
-    // the selector will match all input controls of type :checkbox
-    // and attach a click event handler 
-    $("input:checkbox").on('click', function() {
-      // in the handler, 'this' refers to the box clicked on
-      var $box = $(this);
-      if ($box.is(":checked")) {
-        // the name of the box is retrieved using the .attr() method
-        // as it is assumed and expected to be immutable
-        var group = "input:checkbox[name='" + $box.attr("name") + "']";
-        // the checked state of the group/box on the other hand will change
-        // and the current value is retrieved using .prop() method
-        $(group).prop("checked", false);
-        $box.prop("checked", true);
-      } else {
-        $box.prop("checked", false);
-      }
-    });
-</script>
+
