@@ -50,8 +50,8 @@ $(document).on("change", ".select", function() {
   $(".select:checked").each(function() {
     arr.push($(this).val());
   })
+  arr.reverse();
   var vals = arr.join("/");
-  vals.reverse();
   var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals;
   var link = arr.length > 0 ? '<a href="'+str+'" class="btn btn-default btn-xl" download>Download File</a>': '' ;
   
