@@ -48,9 +48,9 @@
     </div>
 </section>
 <script>
-$(document).on("checked", ".select", function() {
+$(document).on("change", ".select", function() {
   var arr = []
-  $(".select:radio").each(function() {
+  $(".select:checked").each(function() {
     arr.push($(this).val());
   })
   var vals = arr.join("/")
