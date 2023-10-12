@@ -46,9 +46,9 @@
 </section>
 <script>
 $(document).on("change", ".select", function() {
-  var func = $("input[name=Function]:checked").val();
-  var library = $("input[name=Library]:checked").val();
-  var clocking = $("input[name=Clocking]:checked").val();
+  var func = $("input[name='Function']:checked").val();
+  var library = $("input[name='Library']:checked").val();
+  var clocking = $("input[name='Clocking']:checked").val();
   if(func && library && clocking){
       var vals = library + "/" + clocking + "/" + func;
       var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals;
