@@ -47,7 +47,7 @@
 <script>
 $(document).on("change", ".select", function() {
   var func = document.querySelector('input[name=Function]:checked').value;
-  var library = document.querySelector('input[name=library]:checked').value;
+  var library = document.querySelector('input[name=Library]:checked').value;
   var clocking = document.querySelector('input[name=Clocking]:checked').value;
   var vals = library + "/" + clocking + "/" + func;
   var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals;
