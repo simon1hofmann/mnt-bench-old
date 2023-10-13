@@ -8,15 +8,33 @@
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
                 <div>
                   <h3>Choose Function</h3>
-                    <label>
-                    <input type="radio" class="select" value="mux.fgl" name="Function" /> MUX 
-                    </label>
-                    <label>
-                    <input type="radio" class="select" value="xor.fgl" name="Function" /> XOR 
-                    </label>
-                    <label>
-                    <input type="radio" class="select" value="xnor.fgl" name="Function" /> XNOR 
-                    </label>
+                    <h4>Trindade16</h4>
+                        <label>
+                        <input type="radio" class="select" value="mux21" name="Function" /> mux21 
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="xor2" name="Function" /> xor2 
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="xnor2" name="Function" /> xnor2 
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="HA" name="Function" /> HA 
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="FA" name="Function" /> FA 
+                        </label>
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="par_gen" name="Function" /> par_gen 
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="par_check" name="Function" /> par_check 
+                        </label>
+                    <h4>Fontes18</h4>
+                        <label>
+                        <input type="radio" class="select" value="parity" name="Function" /> parity 
+                        </label>
                 </div>
                 <div>
                   <h3>Choose Gate Library</h3>
@@ -40,6 +58,7 @@
                     </label>
                 </div>
                 <div class="link-container"></div>
+                <div class="link-container-2"></div>
             </div>
         </div>
     </div>
@@ -50,10 +69,25 @@ $(document).on("change", ".select", function() {
   var library = $("input[name='Library']:checked").val();
   var clocking = $("input[name='Clocking']:checked").val();
   if(func && library && clocking){
-      var vals = library + "/" + clocking + "/" + func;
+      var vals = library + "/" + clocking + "/" + func + ".fgl";
       var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals;
       var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download File</a>';
       $('.link-container').html(link);
+  }
+
+  if (func){
+      var trindade16 = ["mux21", "xor2", "xnor2", "HA", "FA", "par_gen", "par_check"];
+      var fontes18 = ["parity"];
+      if (trindade16.indexOf(func) > -1) {
+          var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/Networks/trindade16/" + func + ".v";
+          var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download Specification File</a>';
+          $('.link-container-2').html(link);
+      }    
+      else if (fontes18.indexOf(func) > -1) {
+          var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/Networks/fontes18/" + func + ".v";
+          var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download Specification File</a>';
+          $('.link-container-2').html(link);
+      }    
   }
 });
 </script>
