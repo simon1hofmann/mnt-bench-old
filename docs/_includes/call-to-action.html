@@ -99,13 +99,13 @@ $(document).on("change", ".select", function() {
       }
   }
 
-  if (!func && library){
+  if (library){
       var str = "https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fsimon1hofmann%2Fmnt-bench%2Ftree%2Fmain%2Fbenchmarks%2F" + library;
       var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download all layouts for this library</a>';
       $('.link-container-library').html(link);
   }
 
-  if (!func && library && clocking){
+  if (library && clocking){
       var str = "https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fsimon1hofmann%2Fmnt-bench%2Ftree%2Fmain%2Fbenchmarks%2F" + library + "%2f" + clocking;
       var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download all layouts for this library and clocking scheme</a>';
       $('.link-container-library-clocking').html(link);
