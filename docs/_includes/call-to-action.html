@@ -36,6 +36,7 @@
                         <input type="radio" class="select" value="parity" name="Function" /> parity 
                         </label>
                 </div>
+                <div class="link-container-specification-file"></div>
                 <div>
                   <h3>Choose Gate Library</h3>
                     <label>
@@ -57,8 +58,7 @@
                     <input type="radio" class="select" value="RES" name="Clocking" /> RES
                     </label>
                 </div>
-                <div class="link-container"></div>
-                <div class="link-container-2"></div>
+                <div class="link-container-gate-level-file"></div>
             </div>
         </div>
     </div>
@@ -72,7 +72,7 @@ $(document).on("change", ".select", function() {
       var vals = library + "/" + clocking + "/" + func + ".fgl";
       var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals;
       var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download File</a>';
-      $('.link-container').html(link);
+      $('.link-container-gate-level-file').html(link);
   }
 
   if (func){
@@ -86,7 +86,7 @@ $(document).on("change", ".select", function() {
       else if (fontes18.indexOf(func) > -1) {
           var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/Networks/fontes18/" + func + ".v";
           var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download Specification File</a>';
-          $('.link-container-2').html(link);
+          $('.link-container-specification-file').html(link);
       }    
   }
 });
