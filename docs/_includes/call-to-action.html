@@ -73,7 +73,7 @@ $(document).on("change", ".select", function() {
   if(func && library && clocking){
       var vals = library + "/" + clocking + "/" + func + ".fgl";
       var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/" + vals;
-      var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download File</a>';
+      var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download layout</a>';
       $('.link-container-gate-level-file').html(link);
   }
 
@@ -82,7 +82,7 @@ $(document).on("change", ".select", function() {
       var fontes18 = ["parity"];
       if (trindade16.indexOf(func) > -1) {
           var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/Networks/trindade16/" + func + ".v";
-          var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download Specification File</a>';
+          var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download network</a>';
           $('.link-container-specification-file-trindade16').html(link);
       }
       else {
@@ -90,7 +90,7 @@ $(document).on("change", ".select", function() {
       }
       if (fontes18.indexOf(func) > -1) {
           var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/Networks/fontes18/" + func + ".v";
-          var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download Specification File</a>';
+          var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download network</a>';
           $('.link-container-specification-file-fontes18').html(link);
       }
       else {
@@ -99,8 +99,8 @@ $(document).on("change", ".select", function() {
   }
 
   if (!func && library){
-      var str = https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fsimon1hofmann%2Fmnt-bench%2Ftree%2Fmain%2Fbenchmarks%2F + library;
-      var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download Specification File</a>';
+      var str = "https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fsimon1hofmann%2Fmnt-bench%2Ftree%2Fmain%2Fbenchmarks%2F" + library;
+      var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download all layouts for this library</a>';
       $('.link-container-library').html(link);
   }
 });
