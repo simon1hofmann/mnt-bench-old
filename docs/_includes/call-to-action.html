@@ -31,11 +31,12 @@
                         <label>
                         <input type="radio" class="select" value="par_check" name="Function" /> par_check 
                         </label>
+                        <div class="link-container-specification-file-trindade16"></div>
                     <h4>Fontes18</h4>
                         <label>
                         <input type="radio" class="select" value="parity" name="Function" /> parity 
                         </label>
-                    <div class="link-container-specification-file"></div>
+                        <div class="link-container-specification-file-fontes18"></div>
                 </div>
                 <div>
                   <h3>Choose Gate Library</h3>
@@ -81,12 +82,12 @@ $(document).on("change", ".select", function() {
       if (trindade16.indexOf(func) > -1) {
           var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/Networks/trindade16/" + func + ".v";
           var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download Specification File</a>';
-          $('.link-container-2').html(link);
+          $('.link-container-specification-file-trindade16').html(link);
       }    
       else if (fontes18.indexOf(func) > -1) {
           var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/Networks/fontes18/" + func + ".v";
           var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download Specification File</a>';
-          $('.link-container-specification-file').html(link);
+          $('.link-container-specification-file-fontes18').html(link);
       }    
   }
 });
