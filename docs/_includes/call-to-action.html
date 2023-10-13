@@ -47,6 +47,7 @@
                     <input type="radio" class="select" value="Bestagon" name="Library" /> Bestagon 
                     </label>
                 </div>
+                <div class="link-container-library"></div>
                 <div>
                   <h3>Choose Clocking Scheme</h3>
                     <label>
@@ -95,6 +96,12 @@ $(document).on("change", ".select", function() {
       else {
           $('.link-container-specification-file-fontes18').html("");
       }
+  }
+
+  if (!func && library){
+      var str = https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fsimon1hofmann%2Fmnt-bench%2Ftree%2Fmain%2Fbenchmarks%2F + library;
+      var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download Specification File</a>';
+      $('.link-container-library').html(link);
   }
 });
 </script>
