@@ -1,0 +1,8 @@
+benchmarks/* linguist-vendored
+benchmarks/Networks/trindade16/* linguist-vendored
+benchmarks/Networks/fontes18/* linguist-vendored
+benchmarks/Networks/ISCAS89/* linguist-vendored
+benchmarks/Networks/EPFL/* linguist-vendored
+*.v linguist-detectable=false
+*.fs linguist-detectable=false
+libs/* linguist-detectable=false
