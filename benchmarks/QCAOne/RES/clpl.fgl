@@ -3,18 +3,18 @@
   <fiction>
     <fiction_version>fiction v0.5.0</fiction_version>
     <available_at>https://github.com/cda-tum/fiction</available_at>
-    <date>2023-10-16 14:45:00</date>
+    <date>2023-10-17 13:00:51</date>
   </fiction>
   <layout>
     <name></name>
     <topology>cartesian</topology>
     <size>
-      <x>3</x>
-      <y>6</y>
+      <x>1</x>
+      <y>18</y>
       <z>1</z>
     </size>
     <clocking>
-      <name>2DDWAVE</name>
+      <name>RES</name>
     </clocking>
   </layout>
   <gates>
@@ -24,7 +24,7 @@
       <name>pi1</name>
       <loc>
         <x>0</x>
-        <y>4</y>
+        <y>1</y>
         <z>0</z>
       </loc>
     </gate>
@@ -34,7 +34,7 @@
       <name>pi2</name>
       <loc>
         <x>0</x>
-        <y>3</y>
+        <y>10</y>
         <z>0</z>
       </loc>
     </gate>
@@ -44,7 +44,7 @@
       <name>pi3</name>
       <loc>
         <x>0</x>
-        <y>0</y>
+        <y>2</y>
         <z>0</z>
       </loc>
     </gate>
@@ -53,8 +53,8 @@
       <type>PI</type>
       <name>pi4</name>
       <loc>
-        <x>1</x>
-        <y>0</y>
+        <x>0</x>
+        <y>5</y>
         <z>0</z>
       </loc>
     </gate>
@@ -63,52 +63,78 @@
       <type>PI</type>
       <name>pi5</name>
       <loc>
-        <x>2</x>
+        <x>1</x>
         <y>0</y>
         <z>0</z>
       </loc>
     </gate>
     <gate>
       <id>5</id>
-      <type>BUF</type>
-      <name></name>
+      <type>PI</type>
+      <name>pi6</name>
       <loc>
         <x>0</x>
-        <y>5</y>
+        <y>4</y>
         <z>0</z>
       </loc>
-      <incoming>
-        <signal>
-          <x>0</x>
-          <y>4</y>
-          <z>0</z>
-        </signal>
-      </incoming>
     </gate>
     <gate>
       <id>6</id>
-      <type>BUF</type>
-      <name></name>
+      <type>PI</type>
+      <name>pi7</name>
       <loc>
         <x>0</x>
-        <y>1</y>
+        <y>8</y>
         <z>0</z>
       </loc>
-      <incoming>
-        <signal>
-          <x>0</x>
-          <y>0</y>
-          <z>0</z>
-        </signal>
-      </incoming>
     </gate>
     <gate>
       <id>7</id>
-      <type>BUF</type>
-      <name></name>
+      <type>PI</type>
+      <name>pi8</name>
       <loc>
         <x>0</x>
-        <y>2</y>
+        <y>13</y>
+        <z>0</z>
+      </loc>
+    </gate>
+    <gate>
+      <id>8</id>
+      <type>PI</type>
+      <name>pi9</name>
+      <loc>
+        <x>0</x>
+        <y>12</y>
+        <z>0</z>
+      </loc>
+    </gate>
+    <gate>
+      <id>9</id>
+      <type>PI</type>
+      <name>pi10</name>
+      <loc>
+        <x>0</x>
+        <y>16</y>
+        <z>0</z>
+      </loc>
+    </gate>
+    <gate>
+      <id>10</id>
+      <type>PI</type>
+      <name>pi11</name>
+      <loc>
+        <x>0</x>
+        <y>17</y>
+        <z>0</z>
+      </loc>
+    </gate>
+    <gate>
+      <id>11</id>
+      <type>AND</type>
+      <name></name>
+      <loc>
+        <x>1</x>
+        <y>1</y>
         <z>0</z>
       </loc>
       <incoming>
@@ -117,11 +143,16 @@
           <y>1</y>
           <z>0</z>
         </signal>
+        <signal>
+          <x>1</x>
+          <y>0</y>
+          <z>0</z>
+        </signal>
       </incoming>
     </gate>
     <gate>
-      <id>8</id>
-      <type>BUF</type>
+      <id>12</id>
+      <type>OR</type>
       <name></name>
       <loc>
         <x>1</x>
@@ -134,16 +165,21 @@
           <y>2</y>
           <z>0</z>
         </signal>
+        <signal>
+          <x>1</x>
+          <y>1</y>
+          <z>0</z>
+        </signal>
       </incoming>
     </gate>
     <gate>
-      <id>9</id>
+      <id>13</id>
       <type>BUF</type>
       <name></name>
       <loc>
         <x>1</x>
         <y>3</y>
-        <z>1</z>
+        <z>0</z>
       </loc>
       <incoming>
         <signal>
@@ -154,8 +190,8 @@
       </incoming>
     </gate>
     <gate>
-      <id>10</id>
-      <type>BUF</type>
+      <id>14</id>
+      <type>AND</type>
       <name></name>
       <loc>
         <x>1</x>
@@ -166,13 +202,18 @@
         <signal>
           <x>1</x>
           <y>3</y>
-          <z>1</z>
+          <z>0</z>
+        </signal>
+        <signal>
+          <x>0</x>
+          <y>4</y>
+          <z>0</z>
         </signal>
       </incoming>
     </gate>
     <gate>
-      <id>11</id>
-      <type>AND</type>
+      <id>15</id>
+      <type>OR</type>
       <name></name>
       <loc>
         <x>1</x>
@@ -193,96 +234,18 @@
       </incoming>
     </gate>
     <gate>
-      <id>12</id>
-      <type>AND</type>
-      <name></name>
-      <loc>
-        <x>1</x>
-        <y>1</y>
-        <z>0</z>
-      </loc>
-      <incoming>
-        <signal>
-          <x>0</x>
-          <y>1</y>
-          <z>0</z>
-        </signal>
-        <signal>
-          <x>1</x>
-          <y>0</y>
-          <z>0</z>
-        </signal>
-      </incoming>
-    </gate>
-    <gate>
-      <id>13</id>
-      <type>INV</type>
-      <name></name>
-      <loc>
-        <x>2</x>
-        <y>1</y>
-        <z>0</z>
-      </loc>
-      <incoming>
-        <signal>
-          <x>1</x>
-          <y>1</y>
-          <z>0</z>
-        </signal>
-      </incoming>
-    </gate>
-    <gate>
-      <id>14</id>
-      <type>BUF</type>
-      <name></name>
-      <loc>
-        <x>2</x>
-        <y>2</y>
-        <z>0</z>
-      </loc>
-      <incoming>
-        <signal>
-          <x>2</x>
-          <y>1</y>
-          <z>0</z>
-        </signal>
-      </incoming>
-    </gate>
-    <gate>
-      <id>15</id>
-      <type>BUF</type>
-      <name></name>
-      <loc>
-        <x>1</x>
-        <y>3</y>
-        <z>0</z>
-      </loc>
-      <incoming>
-        <signal>
-          <x>0</x>
-          <y>3</y>
-          <z>0</z>
-        </signal>
-      </incoming>
-    </gate>
-    <gate>
       <id>16</id>
-      <type>AND</type>
+      <type>BUF</type>
       <name></name>
       <loc>
-        <x>2</x>
-        <y>3</y>
+        <x>1</x>
+        <y>6</y>
         <z>0</z>
       </loc>
       <incoming>
         <signal>
-          <x>2</x>
-          <y>2</y>
-          <z>0</z>
-        </signal>
-        <signal>
           <x>1</x>
-          <y>3</y>
+          <y>5</y>
           <z>0</z>
         </signal>
       </incoming>
@@ -292,36 +255,36 @@
       <type>BUF</type>
       <name></name>
       <loc>
-        <x>2</x>
-        <y>4</y>
+        <x>1</x>
+        <y>7</y>
         <z>0</z>
       </loc>
       <incoming>
         <signal>
-          <x>2</x>
-          <y>3</y>
+          <x>1</x>
+          <y>6</y>
           <z>0</z>
         </signal>
       </incoming>
     </gate>
     <gate>
       <id>18</id>
-      <type>OR</type>
+      <type>AND</type>
       <name></name>
       <loc>
-        <x>2</x>
-        <y>5</y>
+        <x>1</x>
+        <y>8</y>
         <z>0</z>
       </loc>
       <incoming>
         <signal>
           <x>1</x>
-          <y>5</y>
+          <y>7</y>
           <z>0</z>
         </signal>
         <signal>
-          <x>2</x>
-          <y>4</y>
+          <x>0</x>
+          <y>8</y>
           <z>0</z>
         </signal>
       </incoming>
@@ -331,31 +294,36 @@
       <type>BUF</type>
       <name></name>
       <loc>
-        <x>2</x>
-        <y>6</y>
+        <x>1</x>
+        <y>9</y>
         <z>0</z>
       </loc>
       <incoming>
         <signal>
-          <x>2</x>
-          <y>5</y>
+          <x>1</x>
+          <y>8</y>
           <z>0</z>
         </signal>
       </incoming>
     </gate>
     <gate>
       <id>20</id>
-      <type>PO</type>
-      <name>po1</name>
+      <type>OR</type>
+      <name></name>
       <loc>
-        <x>3</x>
-        <y>6</y>
+        <x>1</x>
+        <y>10</y>
         <z>0</z>
       </loc>
       <incoming>
         <signal>
-          <x>2</x>
-          <y>6</y>
+          <x>0</x>
+          <y>10</y>
+          <z>0</z>
+        </signal>
+        <signal>
+          <x>1</x>
+          <y>9</y>
           <z>0</z>
         </signal>
       </incoming>
@@ -365,109 +333,221 @@
       <type>BUF</type>
       <name></name>
       <loc>
-        <x>3</x>
-        <y>0</y>
+        <x>1</x>
+        <y>11</y>
         <z>0</z>
       </loc>
       <incoming>
         <signal>
-          <x>2</x>
-          <y>0</y>
+          <x>1</x>
+          <y>10</y>
           <z>0</z>
         </signal>
       </incoming>
     </gate>
     <gate>
       <id>22</id>
-      <type>BUF</type>
-      <name></name>
+      <type>PO</type>
+      <name>po1</name>
       <loc>
-        <x>3</x>
-        <y>1</y>
+        <x>0</x>
+        <y>11</y>
         <z>0</z>
       </loc>
       <incoming>
         <signal>
-          <x>3</x>
-          <y>0</y>
+          <x>1</x>
+          <y>11</y>
           <z>0</z>
         </signal>
       </incoming>
     </gate>
     <gate>
       <id>23</id>
-      <type>AND</type>
-      <name></name>
+      <type>PO</type>
+      <name>po2</name>
       <loc>
-        <x>3</x>
-        <y>2</y>
+        <x>0</x>
+        <y>7</y>
         <z>0</z>
       </loc>
       <incoming>
         <signal>
-          <x>2</x>
-          <y>2</y>
-          <z>0</z>
-        </signal>
-        <signal>
-          <x>3</x>
-          <y>1</y>
+          <x>1</x>
+          <y>7</y>
           <z>0</z>
         </signal>
       </incoming>
     </gate>
     <gate>
       <id>24</id>
-      <type>BUF</type>
-      <name></name>
+      <type>PO</type>
+      <name>po3</name>
       <loc>
-        <x>3</x>
+        <x>0</x>
         <y>3</y>
         <z>0</z>
       </loc>
       <incoming>
         <signal>
-          <x>3</x>
-          <y>2</y>
-          <z>0</z>
-        </signal>
-      </incoming>
-    </gate>
-    <gate>
-      <id>25</id>
-      <type>OR</type>
-      <name></name>
-      <loc>
-        <x>3</x>
-        <y>4</y>
-        <z>0</z>
-      </loc>
-      <incoming>
-        <signal>
-          <x>2</x>
-          <y>4</y>
-          <z>0</z>
-        </signal>
-        <signal>
-          <x>3</x>
+          <x>1</x>
           <y>3</y>
           <z>0</z>
         </signal>
       </incoming>
     </gate>
     <gate>
-      <id>26</id>
-      <type>PO</type>
-      <name>po2</name>
+      <id>25</id>
+      <type>AND</type>
+      <name></name>
       <loc>
-        <x>3</x>
-        <y>5</y>
+        <x>1</x>
+        <y>12</y>
         <z>0</z>
       </loc>
       <incoming>
         <signal>
-          <x>3</x>
-          <y>4</y>
+          <x>1</x>
+          <y>11</y>
+          <z>0</z>
+        </signal>
+        <signal>
+          <x>0</x>
+          <y>12</y>
+          <z>0</z>
+        </signal>
+      </incoming>
+    </gate>
+    <gate>
+      <id>26</id>
+      <type>OR</type>
+      <name></name>
+      <loc>
+        <x>1</x>
+        <y>13</y>
+        <z>0</z>
+      </loc>
+      <incoming>
+        <signal>
+          <x>0</x>
+          <y>13</y>
+          <z>0</z>
+        </signal>
+        <signal>
+          <x>1</x>
+          <y>12</y>
+          <z>0</z>
+        </signal>
+      </incoming>
+    </gate>
+    <gate>
+      <id>27</id>
+      <type>BUF</type>
+      <name></name>
+      <loc>
+        <x>1</x>
+        <y>14</y>
+        <z>0</z>
+      </loc>
+      <incoming>
+        <signal>
+          <x>1</x>
+          <y>13</y>
+          <z>0</z>
+        </signal>
+      </incoming>
+    </gate>
+    <gate>
+      <id>28</id>
+      <type>BUF</type>
+      <name></name>
+      <loc>
+        <x>1</x>
+        <y>15</y>
+        <z>0</z>
+      </loc>
+      <incoming>
+        <signal>
+          <x>1</x>
+          <y>14</y>
+          <z>0</z>
+        </signal>
+      </incoming>
+    </gate>
+    <gate>
+      <id>29</id>
+      <type>AND</type>
+      <name></name>
+      <loc>
+        <x>1</x>
+        <y>16</y>
+        <z>0</z>
+      </loc>
+      <incoming>
+        <signal>
+          <x>1</x>
+          <y>15</y>
+          <z>0</z>
+        </signal>
+        <signal>
+          <x>0</x>
+          <y>16</y>
+          <z>0</z>
+        </signal>
+      </incoming>
+    </gate>
+    <gate>
+      <id>30</id>
+      <type>OR</type>
+      <name></name>
+      <loc>
+        <x>1</x>
+        <y>17</y>
+        <z>0</z>
+      </loc>
+      <incoming>
+        <signal>
+          <x>0</x>
+          <y>17</y>
+          <z>0</z>
+        </signal>
+        <signal>
+          <x>1</x>
+          <y>16</y>
+          <z>0</z>
+        </signal>
+      </incoming>
+    </gate>
+    <gate>
+      <id>31</id>
+      <type>PO</type>
+      <name>po4</name>
+      <loc>
+        <x>1</x>
+        <y>18</y>
+        <z>0</z>
+      </loc>
+      <incoming>
+        <signal>
+          <x>1</x>
+          <y>17</y>
+          <z>0</z>
+        </signal>
+      </incoming>
+    </gate>
+    <gate>
+      <id>32</id>
+      <type>PO</type>
+      <name>po5</name>
+      <loc>
+        <x>0</x>
+        <y>15</y>
+        <z>0</z>
+      </loc>
+      <incoming>
+        <signal>
+          <x>1</x>
+          <y>15</y>
           <z>0</z>
         </signal>
       </incoming>
