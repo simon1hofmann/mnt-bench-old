@@ -40,9 +40,6 @@
                         <input type="radio" class="select" value="t" name="Function" /> t
                         </label>
                         <label>
-                        <input type="radio" class="select" value="c17" name="Function" /> c17
-                        </label>
-                        <label>
                         <input type="radio" class="select" value="b1_r2" name="Function" /> b1_r2
                         </label>
                         <label>
@@ -95,6 +92,9 @@
                     <label>
                     <input type="radio" class="select" value="RES" name="Clocking" /> RES
                     </label>
+                    <label>
+                    <input type="radio" class="select" value="ROW" name="Clocking" /> ROW
+                    </label>
                     <div class="link-container-library-clocking"></div>
                 </div>
                 <div>
@@ -119,7 +119,7 @@ $(document).on("change", ".select", function() {
 
   if (func){
       var trindade16 = ["mux21", "xor2", "xnor2", "HA", "FA", "par_gen", "par_check"];
-      var fontes18 = ["1bitAdderAOIG", "t", "c17", "b1_r2", "majority", "newtag", "clpl", "xor5_r1", "xor5Maj", "1bitAdderMaj", "2bitAdderMaj", "cm82a_5","parity"];
+      var fontes18 = ["1bitAdderAOIG", "t", "b1_r2", "majority", "newtag", "clpl", "xor5_r1", "xor5Maj", "1bitAdderMaj", "2bitAdderMaj", "cm82a_5","parity"];
       if (trindade16.indexOf(func) > -1) {
           var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/Networks/trindade16/" + func + ".v";
           var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download network</a>';
