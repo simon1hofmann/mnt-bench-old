@@ -34,9 +34,6 @@
                         <div class="link-container-specification-file-trindade16"></div>
                     <h4>Fontes18</h4>
                         <label>
-                        <input type="radio" class="select" value="1bitAdderAOIG" name="Function" /> 1bitAdderAOIG
-                        </label>
-                        <label>
                         <input type="radio" class="select" value="t" name="Function" /> t
                         </label>
                         <label>
@@ -52,10 +49,10 @@
                         <input type="radio" class="select" value="clpl" name="Function" /> clpl
                         </label>
                         <label>
-                        <input type="radio" class="select" value="xor5_r1" name="Function" /> xor5_r1
+                        <input type="radio" class="select" value="xor5Maj" name="Function" /> xor5Maj
                         </label>
                         <label>
-                        <input type="radio" class="select" value="xor5Maj" name="Function" /> xor5Maj
+                        <input type="radio" class="select" value="1bitAdderAOIG" name="Function" /> 1bitAdderAOIG
                         </label>
                         <label>
                         <input type="radio" class="select" value="1bitAdderMaj" name="Function" /> 1bitAdderMaj
@@ -70,6 +67,41 @@
                         <input type="radio" class="select" value="parity" name="Function" /> parity
                         </label>
                         <div class="link-container-specification-file-fontes18"></div>
+                    <h4>ISCAS85</h4>
+                        <label>
+                        <input type="radio" class="select" value="c17" name="Function" /> c17
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="c432" name="Function" /> c432
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="c499" name="Function" /> c499
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="c880" name="Function" /> c880
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="c1355" name="Function" /> c1355
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="c1908" name="Function" /> c1908
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="c2670" name="Function" /> c2670
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="c3540" name="Function" /> c3540
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="c5315" name="Function" /> c5315
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="c6288" name="Function" /> c6288
+                        </label>
+                        <label>
+                        <input type="radio" class="select" value="c7552" name="Function" /> c7552
+                        </label>
+                        <div class="link-container-specification-file-iscas85"></div>
                 </div>
                 <div>
                   <h3>Choose Gate Library</h3>
@@ -122,7 +154,8 @@ $(document).on("change", ".select", function() {
 
   if (func){
       var trindade16 = ["mux21", "xor2", "xnor2", "HA", "FA", "par_gen", "par_check"];
-      var fontes18 = ["1bitAdderAOIG", "t", "b1_r2", "majority", "newtag", "clpl", "xor5_r1", "xor5Maj", "1bitAdderMaj", "2bitAdderMaj", "cm82a_5","parity"];
+      var fontes18 = ["t", "b1_r2", "majority", "newtag", "clpl", "xor5Maj", "1bitAdderAOIG", "1bitAdderMaj", "2bitAdderMaj", "cm82a_5","parity"];
+      var iscas85 = ["c17", "c432", "c499", "c880", "c1355", "c1908", "c2670", "c3540", "c5315", "c6288", "c7552"]
       if (trindade16.indexOf(func) > -1) {
           var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/Networks/trindade16/" + func + ".v";
           var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download network</a>';
@@ -138,6 +171,14 @@ $(document).on("change", ".select", function() {
       }
       else {
           $('.link-container-specification-file-fontes18').html("");
+      }
+      if (iscas85.indexOf(func) > -1) {
+          var str = "https://github.com/simon1hofmann/mnt-bench/blob/main/benchmarks/Networks/ISCAS85/" + func + ".v";
+          var link = '<a href="'+str+'" class="btn btn-default btn-xl" download>Download network</a>';
+          $('.link-container-specification-file-iscas85').html(link);
+      }
+      else {
+          $('.link-container-specification-file-iscas85').html("");
       }
   }
 
